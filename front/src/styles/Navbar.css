@@ -1,0 +1,33 @@
+.nav-col {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.nav-item {
+  z-index: 100;
+  border-radius: 0.75rem;
+  margin: 0.5rem;
+  padding: 0.15rem 0.6rem;
+  box-shadow:  5px 5px 10px #292929, -5px -5px 10px #444444;
+  transition-duration: 250ms;
+  transition-delay: 0ms;
+}
+
+.nav-item:hover {
+  transform: scale(100.5%);
+  box-shadow:  5px 5px 10px #212121, -5px -5px 10px #4b4b4b;
+}
+
+.navbar {
+  align-items: center;
+  height: 4rem;
+  color: #ebdbb2;
+  background: transparent;
+}
+
+.mid-a {
+  font-family: "Times New Roman", Times, serif;
+  font-weight: bolder;
+  font-size: 2rem;
+  box-shadow: none;
+}
