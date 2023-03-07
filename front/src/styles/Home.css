@@ -1,11 +1,11 @@
 .home {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 4rem;
-  justify-content: space-between;
-  color: #ebdbb2;
-}
-
-.home div {
-  margin: 0.5rem
+  margin-top: 1.5rem;
+  margin: 3rem;
+  justify-content: center;
+  align-items: flex-start;
+  color: #fff;
+  align-content: space-between;
+  gap: 3rem;
 }

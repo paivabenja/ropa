@@ -4,25 +4,32 @@
 }
 
 .nav-item {
-  z-index: 100;
+  z-index: 10;
   border-radius: 0.75rem;
   margin: 0.5rem;
   padding: 0.15rem 0.6rem;
-  box-shadow:  5px 5px 10px #292929, -5px -5px 10px #444444;
   transition-duration: 250ms;
   transition-delay: 0ms;
 }
 
 .nav-item:hover {
   transform: scale(100.5%);
-  box-shadow:  5px 5px 10px #212121, -5px -5px 10px #4b4b4b;
+  box-shadow: 5px 5px 10px #161616, -5px -5px 10px #343434;
 }
 
 .navbar {
+  justify-content: space-between;
+  display: flex;
+  z-index: 9;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  left: 0;
   align-items: center;
   height: 4rem;
-  color: #ebdbb2;
-  background: transparent;
+  color: #ddd;
+  background: #252525;
+  box-shadow: 0 0 0.75rem 1rem #252525;
 }
 
 .mid-a {
@@ -30,4 +37,9 @@
   font-weight: bolder;
   font-size: 2rem;
   box-shadow: none;
+  transition-duration: 500ms;
+}
+
+.mid-a:hover {
+  color: #cc241d;
 }

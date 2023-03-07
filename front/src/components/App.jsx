@@ -1,13 +1,14 @@
-import Navbar from './Navbar'
-import Home from './Home'
+// import Navbar from './Navbar'
+import Home from "./Home";
+import SignUp from "./SignUp";
+import "../styles/App.css";
 
 function App() {
   return (
-    <div className='overflow-hidden'>
-      <Navbar></Navbar>
-      <Home></Home>
+    <div className="App">
+      <SignUp></SignUp>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

@@ -1,8 +1,8 @@
 .item {
   padding: 2rem;
   border-radius: 2rem;
-  box-shadow: 20px 20px 60px #2e2e2e, -20px -20px 60px #3e3e3e;
   transition-duration: 500ms;
+  box-shadow: 7px 7px 14px #161616, -7px -7px 14px #3a3a3a;
 }
 
 .item img {
@@ -11,15 +11,14 @@
 }
 
 .item:hover {
-  transform: scale(101%);
   color: #cc241d;
+  box-shadow: 17px 17px 34px #101010, -17px -17px 34px #404040;
 }
 
 .title {
   font-size: 1.5rem;
   font-weight: 600;
   border-radius: 50px;
-  background: #363636;
   border-radius: 0.75rem;
 }
 
