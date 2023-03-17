@@ -3,9 +3,8 @@ import productos from "./prods.js";
 import Item from "./Item";
 
 export default function Home() {
-  console.log(productos[0].imgFront);
   return (
-    <div className="home">
+    <div className="home mt-20 top-0 absolute">
       {[0, 1, 2, 3, 4, 5, 6, 7].map((i) => {
         return (
           <Item

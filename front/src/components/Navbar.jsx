@@ -1,8 +1,15 @@
+import { Link } from "react-router-dom";
+import { userContext } from '../context/userContext';
 import "../styles/Navbar.css";
+import { useContext } from "react";
+
 
 export default function Navbar() {
+  const {user, setUser} = useContext(userContext)
+  console.log(user.id)
+
   return (
-    <div className="navbar">
+    <div className="justify-between flex z-1 w-full absolute top-0 left-0 items-center h-16 bg-transparent text-gruvbox-light-font">
       <div className="nav-left-col nav-col">
         <a className="nav-item" href="https://github.com">
           Categories
@@ -15,14 +22,14 @@ export default function Navbar() {
         </a>
       </div>
       <div className="absolute w-full nav-col">
-        <a className="mid-a" href="https://github.com">
+        <Link className="mid-a" to="/" >
           <h1>Paiva</h1>
-        </a>
+        </Link>
       </div>
       <div className="nav-right-col nav-col">
-        <a className="nav-item" href="https://github.com">
-          Profile
-        </a>
+        <Link className="nav-item" to={user.id > 0 ? '/profile' : '/signup'}>
+          {user.id > 0 ? 'Profile' : 'Sign In'}
+        </Link>
       </div>
     </div>
   );

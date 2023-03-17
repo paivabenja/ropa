@@ -17,21 +17,6 @@
   box-shadow: 5px 5px 10px #161616, -5px -5px 10px #343434;
 }
 
-.navbar {
-  justify-content: space-between;
-  display: flex;
-  z-index: 9;
-  width: 100%;
-  position: sticky;
-  top: 0;
-  left: 0;
-  align-items: center;
-  height: 4rem;
-  color: #ddd;
-  background: #252525;
-  box-shadow: 0 0 0.75rem 1rem #252525;
-}
-
 .mid-a {
   font-family: "Times New Roman", Times, serif;
   font-weight: bolder;
