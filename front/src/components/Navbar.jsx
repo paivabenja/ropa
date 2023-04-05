@@ -9,7 +9,7 @@ export default function Navbar() {
   console.log(user.id)
 
   return (
-    <div className="justify-between flex z-1 w-full absolute top-0 left-0 items-center h-16 bg-transparent text-gruvbox-light-font">
+    <div className="justify-between flex z-1 w-full absolute top-0 left-0 items-center h-14 bg-transparent text-gruvbox-light-font">
       <div className="nav-left-col nav-col">
         <a className="nav-item" href="https://github.com">
           Categories

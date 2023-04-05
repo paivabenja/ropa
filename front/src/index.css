@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base{
+  @font-face {
+    src: url('./assets/fonts/kredit.otf') format('opentype');
+    font-family: "credit";
+  }
+}
+
 html {
   scrollbar-width: none;
   -ms-overflow-style: none;

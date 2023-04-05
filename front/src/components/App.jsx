@@ -2,7 +2,7 @@ import Navbar from './Navbar'
 import Home from "./Home";
 import SignUp from "./SignUp";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import "../styles/App.css";
+import Profile from './Profile';
 
 const router = createBrowserRouter(
   [
@@ -20,12 +20,19 @@ const router = createBrowserRouter(
         <Navbar />
         <SignUp />
       </>
+    },
+    {
+      path: "/profile",
+      element: <>
+        <Navbar />
+        <Profile />
+      </>
     }
   ])
 
 function App() {
   return (
-    <div className="App">
+    <div className="w-full h-full flex items-center justify-center">
       <RouterProvider router={router} >
       </RouterProvider>
     </div>
