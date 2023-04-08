@@ -22,7 +22,7 @@ const SignUp = () => {
         onSubmit={handleSubmit}
         className="signup text-gruvbox-light-font h-auto w-1/4 text-center p-4"
       >
-        <h2 className="borde ">Create your account</h2>
+        <h2 className="borde">Create your account</h2>
         <label>Enter your email</label>
         <input type="email" className={input} />
         <label>Username</label>

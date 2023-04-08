@@ -13,7 +13,10 @@ module.exports = {
       },
       fontFamily: {
         credit: "credit"
-      }
+      },
+      boxShadow: {
+      'nav-i' : '5px 5px 10px #161616, -5px -5px 10px #343434'
+    }
     }
   },
   plugins: [],

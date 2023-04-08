@@ -4,7 +4,7 @@ const userContext = createContext();
 
 const UserContextProvider = ({ children }) => {
   const [user, setUser] = useState({
-    id: 20,
+    id: 0,
     name: null,
   });
 

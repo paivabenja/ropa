@@ -4,6 +4,7 @@ import SignUp from "./SignUp";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Profile from './Profile';
 
+
 const router = createBrowserRouter(
   [
     {
@@ -12,7 +13,6 @@ const router = createBrowserRouter(
         <Navbar />
         <Home />
       </>,
-      errorElement: <div>aca no perrito</div>
     },
     {
       path: "/signup",
@@ -28,11 +28,13 @@ const router = createBrowserRouter(
         <Profile />
       </>
     }
-  ])
+  ]
+)
 
 function App() {
+
   return (
-    <div className="w-full h-full flex items-center justify-center">
+    <div className="w-full h-full overflow-auto">
       <RouterProvider router={router} >
       </RouterProvider>
     </div>

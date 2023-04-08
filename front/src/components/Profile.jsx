@@ -1,5 +1,3 @@
-import '../styles/paymentCard.css'
-
 const exampleCards = [
   {
     lastFourNumbers: 4321,
