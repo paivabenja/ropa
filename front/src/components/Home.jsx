@@ -25,18 +25,18 @@ export default function Home() {
 
   return (
     <div className="flex flex-wrap mt-4 m-12 justify-center items-start text-white content-start gap-12 z-10">
-      {clothesStock.map((i) => {
-        console.log('console.log de i: ', i)
+      {clothesStock.map((o, i) => {
+        console.log('console.log de clothesStock: ', clothesStock)
         return (
           <Item
             key={i}
-            type={clothesStock[0].type}
-            title={clothesStock[0].title}
-            sizes={clothesStock[0].sizes}
-            imgFront={clothesStock[0].imgFront}
-            imgBack={clothesStock[0].imgBack}
-            price={clothesStock[0].price}
-            stock={clothesStock[0].stock}
+            type={o.type}
+            title={o.title}
+            sizes={o.sizes}
+            imgFront={o.imgFront}
+            imgBack={o.imgBack}
+            price={o.price}
+            hasStock={o.hasStock}
           ></Item>
         );
       })}

@@ -4,7 +4,7 @@ from django.db import models
 class RopaModel(models.Model):
     title = models.CharField(max_length = 200)
     type = models.CharField(max_length = 200)
-    front_picture = models.CharField(max_length = 200)
-    back_picture = models.CharField(max_length = 200)
+    imgFront = models.IntegerField()
+    imgBack = models.IntegerField()
     hasStock = models.BooleanField()
     created_at = models.DateTimeField(auto_now_add=True)

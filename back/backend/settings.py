@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'corsheaders',
     'ropa',
-    'imageserver',
+    'images',
 ]
 
 MIDDLEWARE = [
