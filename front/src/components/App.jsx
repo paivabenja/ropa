@@ -1,43 +1,19 @@
-import Navbar from './Navbar'
+import Navbar from "./Navbar";
 import Home from "./Home";
 import SignUp from "./SignUp";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Profile from './Profile';
-
-
-const router = createBrowserRouter(
-  [
-    {
-      path: "/",
-      element: <>
-        <Navbar />
-        <Home />
-      </>,
-    },
-    {
-      path: "/signup",
-      element: <>
-        <Navbar />
-        <SignUp />
-      </>
-    },
-    {
-      path: "/profile",
-      element: <>
-        <Navbar />
-        <Profile />
-      </>
-    }
-  ]
-)
+import { Routes, Route, BrowserRouter } from "react-router-dom";
+import Profile from "./Profile";
 
 function App() {
-
   return (
-    <div className="w-full h-full overflow-auto">
-      <RouterProvider router={router} >
-      </RouterProvider>
-    </div>
+    <BrowserRouter>
+      <Navbar />
+      <Routes className="w-full h-full overflow-auto">
+        <Route exact path="/" element={<Home />} />
+        <Route path="/profile" element={<Profile />} />
+        <Route path="/signup" element={<SignUp />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

@@ -1,5 +1,3 @@
-import "../styles/SignUp.css";
-
 const SignUp = () => {
   const handleSubmit = (e) => {
     console.log(e);
@@ -13,29 +11,36 @@ const SignUp = () => {
     }
   };
 
-  const input =
-    "p-2 bg-transparent border-solid border-2 border-gruvbox-bg2 hover:border-gruvbox-bg4 focus:border-gruvbox-light-font focus:outline-none enabled:outline-none";
+  const FormInput = ({ type, value, className }) => {
+    return (
+      <input
+        type={type}
+        value={value}
+        className={"p-2 bg-transparent border-solid border-2 border-gruvbox-bg2 rounded-lg w-4/5 m-1 hover:border-gruvbox-bg4 focus:border-gruvbox-light-font focus:outline-none enabled:outline-none duration-300 " + className}
+      />
+    );
+  };
 
   return (
-    <div className="container">
+    <div className="mt-8 w-full flex items-center justify-center">
       <form
         onSubmit={handleSubmit}
-        className="signup text-gruvbox-light-font h-auto w-1/4 text-center p-4"
+        className="text-gruvbox-light-font h-auto w-1/4 text-center p-4"
       >
-        <h2 className="borde">Create your account</h2>
+        <h2>Create your account</h2>
         <label>Enter your email</label>
-        <input type="email" className={input} />
+        <FormInput type="type" />
         <label>Username</label>
-        <input type="text" className={input} />
+        <FormInput type="text" />
         <label>Password</label>
-        <input type="password" className={input} />
+        <FormInput type="password" />
         <br />
         <label>Repeat your password</label>
-        <input type="password" className={input} />
+        <FormInput type="password" />
         <br />
-        <input type="submit" value="submit" className={input} />
+        <FormInput className="w-1/2" type="submit" value="Submit"/>
         <br />
-        <h4 className="text-gruvbox-red ">You need to fill all the fields</h4>
+        <div className="text-gruvbox-red ">You need to fill all the fields</div>
       </form>
     </div>
   );

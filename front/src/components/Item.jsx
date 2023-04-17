@@ -12,7 +12,6 @@ export default function Item(props) {
       .then(setImg)
   }
 
-
   const onHover = () => {
     setImgType("back");
   };
@@ -24,7 +23,7 @@ export default function Item(props) {
   useEffect(getImg, [])
 
   return (
-    <div className="item" onMouseOver={onHover} onMouseLeave={onLeave}>
+    <div className="p-8 rounded-3xl duration-500 item" onMouseOver={onHover} onMouseLeave={onLeave}>
       <div className="title">{props.title}</div>
       <div className="type">{props.type}</div>
       <img src={imgType === "front" ? props.imgFront : props.imgBack} alt="" />
