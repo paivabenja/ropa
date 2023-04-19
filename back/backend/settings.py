@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'corsheaders',
     'ropa',
     'images',
+    'users',
 ]
 
 MIDDLEWARE = [
