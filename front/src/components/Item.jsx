@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import "../styles/Item.css";
 
 export default function Item(props) {
   const [imgType, setImgType] = useState("front");
@@ -36,17 +35,12 @@ export default function Item(props) {
 
   return (
     <div
-      className="p-8 rounded-3xl duration-500 item"
+      className="w-64 h-72 overflow-hidden rounded-lg bg-gruvbox-bg4"
       onMouseOver={onHover}
       onMouseLeave={onLeave}
     >
-      <div className="title">{props.title}</div>
-      <div className="type">{props.type}</div>
-      <img src={imgType === "front" ? imgFront : imgBack} alt="" />
-      <div className="price">{props.price}</div>
-      <div className="stock">
-        {props.hasStock > 0 ? "Hay stock" : "No hay stock"}
-      </div>
+        <img src={imgType === "front" ? imgFront : imgBack} className="w-full h-56 object-cover" />
+        <div className="p-5 text-center h-full">{props.title}</div>
     </div>
   );
 }

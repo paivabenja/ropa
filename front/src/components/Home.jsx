@@ -28,6 +28,7 @@ export default function Home() {
             type={o.type}
             imgs={o.imgs}
             hasStock={o.hasStock}
+            price={o.price}
           ></Item>
         );
       })}

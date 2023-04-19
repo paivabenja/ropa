@@ -12,12 +12,14 @@ module.exports = {
         "mp-bg1": "#5e97f2",
       },
       fontFamily: {
-        credit: "credit"
+        credit: "credit",
       },
       boxShadow: {
-      'nav-i' : '5px 5px 10px #161616, -5px -5px 10px #343434'
-    }
-    }
+        "nav-i": "5px 5px 10px #161616, -5px -5px 10px #343434",
+        "home-i": "7px 7px 14px #161616, -7px -7px 14px #3a3a3a",
+        "home-i-hover": "17px 17px 34px #101010, -17px -17px 34px #404040",
+      },
+    },
   },
   plugins: [],
 };
