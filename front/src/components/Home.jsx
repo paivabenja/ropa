@@ -19,7 +19,7 @@ export default function Home() {
   useEffect(getClothesStock, []);
 
   return (
-    <div className="flex flex-wrap mt-4 m-12 justify-center items-start text-white content-start gap-12 z-10">
+    <div className="flex flex-wrap mt-4 m-12 justify-center items-start content-start gap-12 z-10">
       {clothesStock.map((o, i) => {
         return (
           <Item

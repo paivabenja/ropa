@@ -27,8 +27,11 @@ html::-webkit-scrollbar {
 }
 
 body {
-  background-color: #282828;
   height: 100%;
   margin: 0;
   padding: 0;
+}
+
+#root {
+  background: #262626;
 }

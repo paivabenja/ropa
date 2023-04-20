@@ -6,14 +6,16 @@ import Profile from "./Profile";
 
 function App() {
   return (
-    <BrowserRouter>
-      <Navbar />
-      <Routes className="w-full h-full overflow-auto">
-        <Route exact path="/" element={<Home />} />
-        <Route path="/profile" element={<Profile />} />
-        <Route path="/signup" element={<SignUp />} />
-      </Routes>
-    </BrowserRouter>
+    <div className="bg-neutral-800">
+      <BrowserRouter>
+        <Navbar />
+        <Routes className="w-full h-full overflow-auto">
+          <Route exact path="/" element={<Home />} />
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/signup" element={<SignUp />} />
+        </Routes>
+      </BrowserRouter>
+    </div>
   );
 }
 

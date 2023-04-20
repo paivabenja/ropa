@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 
 export default function Item(props) {
+  const [visible, setVisible] = useState("hidden");
+  const [height, setHeight] = useState("h-64");
   const [imgType, setImgType] = useState("front");
   const [img, setImg] = useState([]);
   const [imgFront, setImgFront] = useState("");
@@ -30,17 +32,36 @@ export default function Item(props) {
     setImgType("front");
   };
 
+  const handleClick = (e) => {
+    if (height === "h-72") setHeight("h-64");
+    if (height === "h-64") setHeight("h-72");
+    if (visible === "hidden") setVisible("block");
+    if (visible === "block") setVisible("hidden");
+  };
+
   useEffect(getImg, []);
   useEffect(getImgs, [img]);
-
   return (
     <div
-      className="w-64 h-72 overflow-hidden rounded-lg bg-gruvbox-bg4"
+      className={
+        "w-64 rounded-xl bg-neutral-700 text-neutral-50 duration-300 flex flex-col " +
+        height
+      }
       onMouseOver={onHover}
       onMouseLeave={onLeave}
+      onClick={handleClick}
     >
-        <img src={imgType === "front" ? imgFront : imgBack} className="w-full h-56 object-cover" />
-        <div className="p-5 text-center h-full">{props.title}</div>
+      <img
+        src={imgType === "front" ? imgFront : imgBack}
+        className="w-full h-44 object-cover rounded-t-xl bg-neutral-700"
+      />
+      <div className="p-4 flex flex-col items-center justify-evenly h-full m-0">
+        <div className="font-bold text-lg">{props.title}</div>
+        <div className={" " + visible}>
+          <div className="text-sm">${props.price}</div>
+          <div>{props.hasStock ? "" : "No hay stock"}</div>
+        </div>
+      </div>
     </div>
   );
 }

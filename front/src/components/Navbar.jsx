@@ -6,7 +6,7 @@ export default function Navbar() {
   const { user, setUser } = useContext(userContext);
 
   return (
-    <div className="justify-between grid grid-cols-3 z-1 w-full top-0 left-0 items-center h-14 bg-transparent text-gruvbox-light-font">
+    <div className="justify-between grid grid-cols-3 z-1 w-full top-0 left-0 items-center h-14 text-neutral-300">
       <div className="flex justify-start">
         <a
           className="z-10 rounded-xl m-2 py-1 px-3 duration-300 hover:scale-105 hover:shadow-nav-i"
@@ -38,7 +38,7 @@ export default function Navbar() {
       <div className="flex justify-end">
         <Link
           className="z-10 rounded-xl m-2 py-1 px-3 duration-300 hover:scale-105 hover:shadow-nav-i"
-          to={user.id > 0 ? "/profile" : "/signup"}
+          to={user.isLogged ? "/profile" : "/signup"}
         >
           {user.isLogged ? "Profile" : "Sign In"}
         </Link>
