@@ -8,3 +8,6 @@ class RopaModel(models.Model):
     imgs = models.IntegerField()
     hasStock = models.BooleanField()
     created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.title

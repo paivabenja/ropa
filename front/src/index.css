@@ -2,10 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base{
-  @font-face {
-    src: url('./assets/fonts/kredit.otf') format('opentype');
-    font-family: "credit";
+/*"hover:border-neutral-400 focus:border-neutral-200 focus:outline-none enabled:outline-none duration-300 placeholder:text-neutral-600 " */
+@layer utilities {
+  input {
+    padding: 0.5rem;
+    background-color: rgba(0, 0, 0, 0);
+    border: solid 2px rgb(82, 82, 82);
+    border-radius: 0.5rem;
+    width: 80%;
+    margin: 0.25rem;
+  }
+
+  input[type='submit'] {
+    width: 50%;
   }
 }
 
